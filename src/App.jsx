@@ -103,7 +103,17 @@ export default function App() {
 
   const handleCityChange = (event) => {
     setSelectedCity(event.target.value);
+    console.log(data);
   };
+
+  function getCurrentDate() {
+    const today = new Date();
+    const day = today.getDate();
+    const month = today.getMonth() + 1;
+    const year = today.getFullYear();
+    return `${day}-${month}-${year}`;
+  }
+
 
   return (
     <div className="bg-[url('/bg.jpg')] bg-cover bg-no-repeat bg-center min-h-screen flex items-center font-bold">
@@ -127,7 +137,7 @@ export default function App() {
           <div className="data w-full md:w-auto self-end">
             <h3 className="text-[20px] md:text-[24px] text-white">التاريخ</h3>
             <h4 className="text-[20px] md:text-[24px] text-white">
-              {data.data?.date?.readable || "غير متاح"}
+              {getCurrentDate()}
             </h4>
           </div>
         </div>

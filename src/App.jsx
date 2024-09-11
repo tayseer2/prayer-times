@@ -4,7 +4,7 @@ import Prayer from "./components/Prayer";
 export default function App() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
-  const [selectedCity, setSelectedCity] = useState("istanbul");
+  const [selectedCity, setSelectedCity] = useState("kahramanmaras");
 
   const cities = [
     { name: "أضنا", value: "adana" },
